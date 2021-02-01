@@ -1,0 +1,10 @@
+  private static final String uiDir = "./ServletUI";
+  public static void main(String[] args) {
+    Tomcat tomcat = new Tomcat();
+    Context context = tomcat.addWebapp("/", new File(uiDir).getAbsolutePath());
+    WebResourceRoot webRoot = new StandardRoot(context);
+    // var resourceSet = new DirResourceSet(webRoot, "")
+
+    tomcat.setPort(8080);
+
+  }
